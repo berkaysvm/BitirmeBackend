@@ -1,0 +1,49 @@
+package com.example.backend.dto;
+
+import com.example.backend.entities.UserCategoryCounter;
+import org.hibernate.annotations.CreationTimestamp;
+
+public class UserCategoryCounterDto {
+    private int id;
+    //    private UserEntity user;
+    private int technology;
+    private int clothes;
+    private int accessory;
+    private int sport;
+    private int hobby;
+
+    public UserCategoryCounterDto(Builder builder) {
+        this.id=builder.id;
+        this.accessory = builder.accessory;
+        this.clothes = builder.clothes;
+        this.hobby = builder.hobby;
+        this.sport = builder.sport;
+        this.technology = builder.technology;
+    }
+
+    public static class Builder
+    {
+        private int id;
+        //    private UserEntity user;
+        private int technology;
+        private int clothes;
+        private int accessory;
+        private int sport;
+        private int hobby;
+
+        public Builder(){}
+
+        public static Builder userCategoryDtoWith(){
+            return new Builder();
+        }
+
+        public Builder id(Integer id){this.id=id; return this;}
+        public Builder technology(Integer technology){this.technology=technology; return this;}
+        public Builder clothes(Integer clothes){this.clothes=clothes; return this;}
+        public Builder accessory(Integer accessory){this.accessory= accessory;return this;}
+        public Builder sport(Integer sport){this.sport=sport; return this;}
+        public Builder hobby(Integer hobby){this.hobby = hobby; return this;}
+
+        public UserCategoryCounterDto build(){return new UserCategoryCounterDto(this);}
+    }
+}
