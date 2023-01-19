@@ -19,7 +19,7 @@ public class SizeEntity {
 
     private String sizeName;
 
-    @OneToMany(mappedBy = "sizeEntity")
+    @OneToMany(mappedBy = "size")
     private List<ProductEntity> productEntityList;
 
 

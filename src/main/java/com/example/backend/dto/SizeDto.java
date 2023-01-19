@@ -1,11 +1,16 @@
 package com.example.backend.dto;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.sql.Statement;
 
-@Component
+@Getter
+@Setter
+@NoArgsConstructor
 public class SizeDto {
 
     private int id;

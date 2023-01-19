@@ -4,6 +4,7 @@ import com.example.backend.entities.FavoriteProductEntity;
 import com.example.backend.entities.ProductEntity;
 import com.example.backend.entities.UserInformation;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import java.util.Stack;
 
+@NoArgsConstructor
 @Getter
 @Setter
-@Component
 public class FavoriteProductEntityDto {
 
     private Long id;

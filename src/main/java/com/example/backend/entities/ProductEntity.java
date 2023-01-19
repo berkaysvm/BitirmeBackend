@@ -27,8 +27,9 @@ public class ProductEntity {
     //private List image;
 
     @ManyToOne
-    @JoinColumn(name = "size")
+    @JoinColumn(name = "size",referencedColumnName = "id")
     private SizeEntity size;
+
     @ManyToOne
     @JoinColumn(name = "brand_id")
     private BrandEntity brand;
@@ -39,9 +40,11 @@ public class ProductEntity {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private OrderEntity orderEntity;
+
     @ManyToOne
     @JoinColumn(name = "userid",referencedColumnName = "id")
     private UserInformation user;
+
     @OneToMany(mappedBy = "productEntity",targetEntity = FavoriteProductEntity.class)
     private List<FavoriteProductEntity> favoriteProductEntities;
     private String location;

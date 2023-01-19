@@ -43,6 +43,6 @@ public class UserInformation {
     @JoinColumn(name = "favoriteProductList",referencedColumnName = "id")
     private FavoriteProductEntity favoriteProductEntity;
 
-    @OneToMany(mappedBy = "userInformation")
+    @OneToMany(mappedBy = "user")
     private List<ProductEntity> productEntityList;
 }
