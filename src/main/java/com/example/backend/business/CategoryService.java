@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 public interface CategoryService {
 
     String save(CategoryEntityDto categoryEntityDto);
+    CategoryEntityDto get(Integer id);
 }

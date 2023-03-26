@@ -28,4 +28,9 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.save(categoryMapper.convertEntitiy(categoryEntityDto));
         return null;
     }
+
+    @Override
+    public CategoryEntityDto get(Integer id) {
+        return categoryMapper.map(categoryRepository.getReferenceById(id));
+    }
 }

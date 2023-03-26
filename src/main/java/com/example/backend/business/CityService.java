@@ -10,6 +10,6 @@ public interface CityService {
 
     CityDto save(CityDto cityDto);
 
-    String delete(Integer id) throws Exception;
+    String delete(Integer id);
 
 }

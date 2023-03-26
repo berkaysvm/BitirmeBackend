@@ -5,6 +5,9 @@ import com.example.backend.entities.UserInformation;
 import org.apache.catalina.User;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class UserMapper {
     public UserInformation convertEntity(UserEntityDto userEntityDto)
@@ -23,6 +26,14 @@ public class UserMapper {
         userInformation.setPostaKodu(userEntityDto.getPostaKodu());
         userInformation.setAge(userEntityDto.getAge());
         return userInformation;
+    }
+    public List<UserEntityDto> maplist(List<UserInformation> userInformation) {
+        List<UserEntityDto> returnList =new ArrayList<>();
+        for (UserInformation userInformation1: userInformation)
+        {
+            returnList.add(map(userInformation1));
+        }
+        return returnList;
     }
 
     public UserEntityDto map(UserInformation userInformation)

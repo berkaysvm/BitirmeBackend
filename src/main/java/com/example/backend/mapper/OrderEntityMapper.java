@@ -23,6 +23,9 @@ public class OrderEntityMapper {
     public OrderEntityDto map(OrderEntity orderEntity)
     {
         return OrderEntityDto.Builder.orderEntityBuilderWith()
+                .id(orderEntity.getId())
+                .date(orderEntity.getDate())
+                .status(orderEntity.getStatus())
                 .build();
     }
 }

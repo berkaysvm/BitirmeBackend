@@ -1,7 +1,6 @@
 package com.example.backend.business;
 
 import com.example.backend.dto.CityDto;
-import com.example.backend.ecxeption.GeneralExceptionHandler;
 import com.example.backend.mapper.CityMapper;
 import com.example.backend.repository.CityRepository;
 import java.util.*;
