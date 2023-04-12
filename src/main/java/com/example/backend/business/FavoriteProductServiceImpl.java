@@ -15,9 +15,9 @@ public class FavoriteProductServiceImpl implements FavoriteProductService{
     private FavoriteProductRepository favoriteProductRepository;
     private FavoriteproductMapper favoriteproductMapper;
 
-    public FavoriteProductServiceImpl(FavoriteProductRepository favoriteProductRepository, FavoriteproductMapper favoriteproductMapper) {
+    public FavoriteProductServiceImpl(FavoriteProductRepository favoriteProductRepository) {
         this.favoriteProductRepository = favoriteProductRepository;
-        this.favoriteproductMapper = favoriteproductMapper;
+       // this.favoriteproductMapper = favoriteproductMapper;
     }
 
     @Override

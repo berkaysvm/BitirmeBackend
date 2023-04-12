@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.AuthProvider;
 import java.security.PublicKey;
 
-@Component
+
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
