@@ -1,7 +1,13 @@
 package com.example.backend.dto;
 
-import javax.persistence.criteria.CriteriaBuilder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.criteria.CriteriaBuilder;
+@Setter
+@Getter
+@NoArgsConstructor
 public class ProductStatusEntityDto {
 
     private int id;
