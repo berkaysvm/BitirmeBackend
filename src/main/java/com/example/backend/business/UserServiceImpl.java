@@ -33,6 +33,6 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserEntityDto getById(Long id) {
-        return null;
+        return userMapper.map(userRepository.getReferenceById(id));
     }
 }

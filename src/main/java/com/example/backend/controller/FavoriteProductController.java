@@ -25,12 +25,12 @@ public class FavoriteProductController {
     }
 
     @GetMapping("/get/")
-    public List<FavoriteProductEntityDto> get(@RequestParam Integer id)
+    public List<FavoriteProductEntityDto> get(@RequestParam Long id)
     {
         return favoriteProductService.getFavoriteProductList(id);
     }
     @DeleteMapping("/delete")
-    public String delete(@RequestParam Integer id){
+    public String delete(@RequestParam Long id){
         return favoriteProductService.delete(id);
     }
 }

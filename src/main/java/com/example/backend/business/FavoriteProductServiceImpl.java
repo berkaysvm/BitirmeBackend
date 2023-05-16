@@ -27,12 +27,14 @@ public class FavoriteProductServiceImpl implements FavoriteProductService{
     }
 
     @Override
-    public String delete(Integer id) {
-        return null;
+    public String delete(Long id)
+    {
+        favoriteProductRepository.deleteById(id);
+        return "silindi";
     }
 
     @Override
-    public List<FavoriteProductEntityDto> getFavoriteProductList(Integer id) {
+    public List<FavoriteProductEntityDto> getFavoriteProductList(Long id) {
         return null;
     }
 

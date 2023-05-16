@@ -10,9 +10,9 @@ public interface FavoriteProductService {
 
     List<ProductEntityDto> getListById(Long id);
 
-    String delete(Integer id);
+    String delete(Long id);
 
-    List<FavoriteProductEntityDto> getFavoriteProductList(Integer id);
+    List<FavoriteProductEntityDto> getFavoriteProductList(Long id);
 
     FavoriteProductEntityDto save(FavoriteProductEntityDto favoriteProductEntityDto);
 }
