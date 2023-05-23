@@ -1,6 +1,5 @@
 package com.example.backend.dto;
 
-import com.example.backend.entities.City;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

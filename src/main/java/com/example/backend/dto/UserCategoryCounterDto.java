@@ -1,11 +1,13 @@
 package com.example.backend.dto;
 
+import com.example.backend.business.UserService;
 import com.example.backend.entities.UserCategoryCounter;
+import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
-
+@Getter
 public class UserCategoryCounterDto {
     private int id;
-    //    private UserEntity user;
+    private UserEntityDto user;
     private int technology;
     private int clothes;
     private int accessory;
@@ -19,12 +21,13 @@ public class UserCategoryCounterDto {
         this.hobby = builder.hobby;
         this.sport = builder.sport;
         this.technology = builder.technology;
+        this.user = builder.user;
     }
 
     public static class Builder
     {
         private int id;
-        //    private UserEntity user;
+        private UserEntityDto user;
         private int technology;
         private int clothes;
         private int accessory;
@@ -43,6 +46,7 @@ public class UserCategoryCounterDto {
         public Builder accessory(Integer accessory){this.accessory= accessory;return this;}
         public Builder sport(Integer sport){this.sport=sport; return this;}
         public Builder hobby(Integer hobby){this.hobby = hobby; return this;}
+        public Builder user(UserEntityDto user) {this.user = user; return this;}
 
         public UserCategoryCounterDto build(){return new UserCategoryCounterDto(this);}
     }

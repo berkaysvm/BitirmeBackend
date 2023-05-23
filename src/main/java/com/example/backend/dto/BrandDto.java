@@ -1,10 +1,11 @@
 package com.example.backend.dto;
 
 import com.example.backend.entities.ProductEntity;
+import lombok.Getter;
 
 import javax.swing.plaf.PanelUI;
 import java.util.List;
-
+@Getter
 public class BrandDto {
     private int id;
     private String name;

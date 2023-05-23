@@ -22,8 +22,9 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserEntityDto save(UserEntityDto userEntityDto) {
 
-        userRepository.save(userMapper.convertEntity(userEntityDto));
-        return null;
+
+        return userMapper.map(userRepository.save(userMapper.convertEntity(userEntityDto)));
+
     }
 
     @Override
