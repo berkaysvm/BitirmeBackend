@@ -3,7 +3,6 @@ package com.example.backend.entities;
 import lombok.*;
 
 import javax.persistence.*;
-import java.security.PrivilegedAction;
 import java.util.List;
 
 @NoArgsConstructor
@@ -45,4 +44,5 @@ public class UserInformation {
 
     @OneToMany(mappedBy = "user")
     private List<ProductEntity> productEntityList;
+
 }

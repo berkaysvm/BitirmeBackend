@@ -1,6 +1,7 @@
 package com.example.backend.business;
 
 import com.example.backend.dto.UserEntityDto;
+import com.example.backend.entities.UserInformation;
 import com.example.backend.mapper.UserMapper;
 import com.example.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +36,15 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserEntityDto getById(Long id) {
         return userMapper.map(userRepository.getReferenceById(id));
+    }
+
+
+    public UserInformation getOneByUsereMail(String userName) {
+        return userRepository.findByeMail(userName);
+
+    }
+
+    public UserInformation saveOneUser(UserInformation userInformation) {
+        return userRepository.save(userInformation);
     }
 }
